@@ -44,45 +44,53 @@ Store the transformed data in a scalable and accessible manner using MongoDB for
 
 This phase related to building a music recommendation system using Apache Spark. It begins by creating a SparkSession and loading data from MongoDB into a DataFrame. Then the real time user preference has been catched by the system and then the producer send that to consumer and the whole training process performs in consumer. Then, it applies various transformations to the DataFrame, including converting string features to float lists, indexing string columns, and exploding arrays. Next, it assembles features into vectors and splits the data into training and test sets, removing outliers from the training data. The code then trains a collaborative filtering model using ALS (Alternating Least Squares) and generates recommendations for specific users. Finally, it evaluates the model's performance and displays the recommendations with their corresponding track titles before stopping the SparkSession. Then consumer sends the top 10 recommendations to the Flask process for real time web interface.
 
-### Kafka Producer: 
+### 1) Kafka Producer: 
 
 Kafka Prodcuer reads the data from mongodb and data about the user selected and send to the consumer and then the following steps are performed in consumer.
 
-### ALS (Alternating Least Squares): 
+### 2) ALS (Alternating Least Squares): 
 
 ALS is a matrix factorization technique commonly used in collaborative filtering for recommendation systems. It factors the user-item interaction matrix into two lower-dimensional matrices representing user and item latent features, iteratively minimizing the difference between the observed and predicted ratings.
 
-### String Indexer: 
+### 3) String Indexer: 
 
 String Indexer is a feature transformer in Spark ML that encodes categorical string columns into numerical indices. It is often used to prepare categorical data for machine learning algorithms.
 
-### Vector Assembler: 
+### 4) Vector Assembler: 
 
 Vector Assembler is a feature transformer in Spark ML that assembles multiple feature columns into a single vector column. It is typically used to combine feature columns before feeding data into machine learning algorithms.
 
-### Regression Evaluator: 
+### 5) Regression Evaluator: 
 
 Regression Evaluator is a model evaluation metric in Spark ML used to evaluate regression models' performance. It calculates the root mean squared error (RMSE) between predicted and actual values to assess the model's accuracy. However, it's commented out in this code.
 
 ## Deployment
 The final phase focuses on deploying the trained model onto a web application, specifically a streaming service. The web application is expected to provide an interactive user experience while seamlessly integrating the recommendation system.
 
-### Web Application Development: 
+### 1) Web Application Development: 
 
 Develop an interactive music streaming web application with a user-friendly interface using Python Flask.
 
-### Real-time Recommendation: 
+### 2) Real-time Recommendation: 
 
 Implement Apache Kafka to dynamically generate music recommendations in real-time based on historical playback data, tailoring suggestions to each user's preferences.
 
-### User Activity Monitoring: 
+### 3) User Activity Monitoring: 
 
 Monitor user activity within the web application to generate personalized recommendations, without requiring users to upload audio files.
 
-### Integration: 
+### 4) Integration: 
 
 Integrate the recommendation system with the web application to provide a seamless user experience, where recommendations are generated in real-time as users interact with the platform.
 
 ## Conclusion:
 
 The completion of this project will result in a robust music recommendation system deployed on a streaming web application. By leveraging ETL pipelines, advanced machine learning techniques, and real-time data processing, the system aims to deliver personalized music recommendations to users, enhancing their overall listening experience.
+
+## References
+
+- Apache Spark ML Library: https://medium.com/data-and-beyond/unleashing-the-power-of-machine-learning-with-spark-ml-and-pyspark-ml-9120697c0745
+- Alternating Least Squares (ALS): https://github.com/recommenders-team/recommenders/blob/main/examples/02_model_collaborative_filtering/als_deep_dive.ipynb
+- Database (MongoDB): https://en.wikipedia.org/wiki/MongoDB
+- Flask: https://en.wikipedia.org/wiki/Flask_(web_framework)
+- The assignment was assisted by ChatGPT to certain extent
