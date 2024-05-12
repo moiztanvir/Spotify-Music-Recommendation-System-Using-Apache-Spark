@@ -94,3 +94,8 @@ The completion of this project will result in a robust music recommendation syst
 - Database (MongoDB): https://en.wikipedia.org/wiki/MongoDB
 - Flask: https://en.wikipedia.org/wiki/Flask_(web_framework)
 - The assignment was assisted by ChatGPT to certain extent
+
+![s1](https://github.com/moiztanvir/Spotify-Music-Recommendation-System-Using-Apache-Spark/assets/151388609/a729e939-e545-460e-8b44-fd09512e9584)
+![s2](https://github.com/moiztanvir/Spotify-Music-Recommendation-System-Using-Apache-Spark/assets/151388609/1a127c80-3778-428b-81b0-b0124ac5cdc4)
+![s3](https://github.com/moiztanvir/Spotify-Music-Recommendation-System-Using-Apache-Spark/assets/151388609/15f9e477-5592-4059-b170-149f0156eb0b)
+
